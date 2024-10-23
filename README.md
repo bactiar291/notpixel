@@ -33,7 +33,7 @@ Penggunaan
 Jalankan bot:
 
  ```bash
-python not_pixel_bot.py
+python notpx.py
 ```
 done ...tinggal masukin user/query bang
 
