@@ -24,10 +24,9 @@ NotPixelBot adalah bot Python yang dirancang untuk mengotomatiskan klaim dan pen
    ```bash  
    python -m venv venv
    source venv/bin/activate 
-```
+    ```
 3. Instal paket yang diperlukan:
-
-```bash
+```bash  
 pip install -r requirements.txt
 ```
 Penggunaan
