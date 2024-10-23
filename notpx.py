@@ -1,7 +1,10 @@
 import requests
 import time
 import random
+from colorama import Fore, Style, init
 
+
+init(autoreset=True)
 
 print(Fore.YELLOW + "========================================")
 print(Fore.CYAN + "AUTHOR : ANAM BACTIAR")
@@ -9,7 +12,6 @@ print(Fore.MAGENTA + "THANKS TO : ANAM BACTIAR!")
 print(Fore.BLUE + "GITHUB: https://github.com/bactiar291")
 print(Fore.GREEN + "BUY COFFEE FOR ME : 0x648dce97a403468dfc02c793c2b441193fccf77b ")
 print(Fore.YELLOW + "========================================\n")
-
 
 
 class NotPixelBot:
@@ -55,17 +57,14 @@ class NotPixelBot:
             self.colored_print("❌ No pixel data available. Skipping painting.")
             return
 
-       
         pixels_to_paint = [pixel for pixel in pixels_data if pixel['color'] != '#000000']
 
         if not pixels_to_paint:
             self.colored_print("✅ All pixels are already painted!")
             return
 
-       
         target_pixel = random.choice(pixels_to_paint)
 
-       
         selected_color = f'#{random.randint(0, 0xFFFFFF):06x}'  
         data = {
             "pixelId": target_pixel['id'],
@@ -101,23 +100,18 @@ class NotPixelBot:
     def run(self):
         """Menjalankan bot secara terus-menerus."""
         while True:
-           
             self.claim_mining()
             self.colored_print("⏳ Waiting for an hour before the next mining claim... ⛏️")
             time.sleep(5)  # Simulasi, gunakan 3600 untuk satu jam
 
-            
             self.auto_paint_pixel()
             self.colored_print("⏳ Waiting for a random interval before the next painting... 🎨")
             time.sleep(random.randint(5, 6))  # Tunggu secara acak antara 5 sampai 6 detik
 
-            
             self.colored_print("⏳ All tasks completed. Taking a break for 6 hours... 💤")
             time.sleep(21600)  # Jeda 6 jam (21600 detik)
 
 if __name__ == "__main__":
-   
     session_data = input("💻 Masukkan query_user Anda: ")
-
     bot = NotPixelBot(session_data)
     bot.run()
