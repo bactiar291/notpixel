@@ -2,6 +2,16 @@ import requests
 import time
 import random
 
+
+print(Fore.YELLOW + "========================================")
+print(Fore.CYAN + "AUTHOR : ANAM BACTIAR")
+print(Fore.MAGENTA + "THANKS TO : ANAM BACTIAR!")
+print(Fore.BLUE + "GITHUB: https://github.com/bactiar291")
+print(Fore.GREEN + "BUY COFFEE FOR ME : 0x648dce97a403468dfc02c793c2b441193fccf77b ")
+print(Fore.YELLOW + "========================================\n")
+
+
+
 class NotPixelBot:
     def __init__(self, session_data):
         self.session_data = session_data
